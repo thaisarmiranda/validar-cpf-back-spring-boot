@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.professorisidro.validacpf.service.Validador;
-
+ 
 @RestController
 @CrossOrigin("*")
 public class ValidadorController {
@@ -19,4 +19,8 @@ public class ValidadorController {
 		 return "{\"status\": \"invalido\"}";
 	}
 
+	@GetMapping("/")
+	public String index() {
+		 return "{\"mensagem\": \"Bem vindo a nossa primeira API\"}";
+	}
 }
